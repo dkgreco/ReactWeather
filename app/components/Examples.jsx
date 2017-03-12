@@ -4,8 +4,8 @@ let Examples = () => {
   "use strict";
   return (
       <div>
-          <h3>Examples Component</h3>
-          <p>Welcome to the Examples Page</p>
+          <h3>Examples</h3>
+          <p>Welcome to the Examples Page Hunter Jung!</p>
       </div>
   );
 };
