@@ -3,7 +3,10 @@ const React = require('react');
 let About = () => {
     "use strict";
     return (
-        <h3>About Component</h3>
+        <div>
+            <h3>About Component</h3>
+            <p>Welcome to the About Page!</p>
+        </div>
     );
 };
 
