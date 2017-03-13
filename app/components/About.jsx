@@ -10,6 +10,7 @@ About = () => {
             <article>
                 Welcome to this simple Weather Application built with React.js!
             </article>
+            <br/>
             <p>
                 This application leverages the following technologies:
                 <ul>
