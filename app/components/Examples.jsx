@@ -6,7 +6,7 @@ Examples = () => {
   "use strict";
   return (
       <div>
-          <h1 className="text-center">Examples</h1>
+          <h1 className="text-center page-title">Examples</h1>
           <p>Here are a few examples to try:</p>
           <ol>
               <li>
