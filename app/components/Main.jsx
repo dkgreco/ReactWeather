@@ -1,7 +1,8 @@
 const React = require('react'),
     Navigation = require('Navigation');
 
-let Main = props => {
+let Main;
+Main = props => {
     "use strict";
     return (
         <div>

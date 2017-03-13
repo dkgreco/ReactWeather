@@ -1,6 +1,7 @@
 const React = require('react');
 
-let WeatherMessage = props => {
+let WeatherMessage;
+WeatherMessage = props => {
     "use strict";
     let {city, temp} = props;
     return (

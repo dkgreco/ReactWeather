@@ -3,7 +3,8 @@ const React = require('react'),
     WeatherMessage = require('WeatherMessage'),
     openWeatherMap = require('openWeatherMap');
 
-let Weather = React.createClass({
+let Weather;
+Weather = React.createClass({
     getInitialState: function() {
         return {
             isLoading: false

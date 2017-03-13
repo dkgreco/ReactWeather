@@ -1,7 +1,8 @@
 const React = require('react');
 let {Link} = require('react-router');
 
-let Examples = () => {
+let Examples;
+Examples = () => {
   "use strict";
   return (
       <div>
