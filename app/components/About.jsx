@@ -8,24 +8,40 @@ About = () => {
         <div>
             <h1 className="text-center">About</h1>
             <article>
-                Welcome to this simple Weather Application built with React.js!<br/><br/>This application leverages the
-                following technologies:
-                React.js, Node.js, Foundation, Webpack, Heroku, Git & GitHub, as well as an API provided by
-                openWeatherMap.<br/><br/>The purpose of the
-                webapp is to demonstrate what can be done with React.js using a simple weather api call as an example.
+                Welcome to this simple Weather Application built with React.js!
             </article>
-            <br/>
+            <p>
+                This application leverages the following technologies:
+                <ul>
+                    <li>
+                        <a href="https://facebook.github.io/react/" target="_blank">React.js</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+                    </li>
+                    <li>
+                        <a href="http://foundation.zurb.com/sites/docs/" target="_blank">Foundation</a>
+                    </li>
+                    <li>
+                        <a href="https://webpack.github.io/docs/" target="_blank">Webpack</a>
+                    </li>
+                    <li>
+                        <a href="https://www.heroku.com" target="_blank">Heroku</a>
+                    </li>
+                    <li>
+                        <a href="https://git-scm.com/" target="_blank">Git</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/" target="_blank">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="http://openweathermap.org/" target="_blank">openWeatherMap</a>
+                    </li>
+                </ul>
+            </p>
             <p>
                 You may find the GitHub repository for this project
                 <a href="https://github.com/dkgreco/ReactWeather" target="_blank"> here</a>.
-            </p>
-            <p>
-                You may find more information about the openWeatherMap API
-                <a href="http://openweathermap.org/" target="_blank"> here</a>.
-            </p>
-            <p>
-                You may find more information about Foundation
-                <a href="http://foundation.zurb.com/sites/docs/" target="_blank"> here</a>.
             </p>
         </div>
     );
