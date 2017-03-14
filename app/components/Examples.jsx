@@ -13,7 +13,7 @@ Examples = () => {
                   <Link to="/?city=Broomfield">Broomfield, CO</Link>
               </li>
               <li>
-                  <Link to="/?city=Pheonix">Pheonix, AZ</Link>
+                  <Link to="/?city=Phoenix">Phoenix, AZ</Link>
               </li>
               <li>
                   <Link to="/?city=Mission%20Viejo">Mission Viejo, CA</Link>

@@ -6,7 +6,13 @@ Navigation = React.createClass({
     onSearch: function(e) {
         "use strict";
         e.preventDefault();
-        alert('Search not yet functional.');
+
+        let city = this.refs.navSearch.value;
+
+        if(city && city.length > 0) {
+            this.refs.navSearch.value = '';
+            window.location.hash = `#/?city=${encodeURIComponent(city)}`;
+        }
     },
     render: function() {
         "use strict";
@@ -38,10 +44,10 @@ Navigation = React.createClass({
                     <form onSubmit={this.onSearch}>
                         <ul className="menu">
                             <li>
-                                <input type="Search" placeholder="Search Weather By City"/>
+                                <input type="Search" ref='navSearch' placeholder="Search Weather By City"/>
                             </li>
                             <li>
-                                <input type="Submit" className="button" value="Get Weather"/>
+                                <input type="Submit" className="button" defaultValue="Get Weather"/>
                             </li>
                         </ul>
                     </form>

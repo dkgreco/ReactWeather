@@ -14,25 +14,47 @@ Weather = React.createClass({
     },
     handleSearch: function(city) {
         let that = this;
-        this.setState({isLoading:true});
+        this.setState({
+            isLoading:true,
+            city: undefined,
+            temp: undefined
+        });
         //debugger;
         function callSuccessHandler(temp) {
             that.setState({
                 city: city,
                 temp: temp,
-                isLoading: false
+                isLoading: false,
+                errorMessage: undefined
             });
         }
 
         function callFailureHandler(e) {
             that.setState({
-                temp:null,
-                isLoading:false,
+                temp: undefined,
+                city: undefined,
+                isLoading: false,
                 errorMessage: e.message
             });
         }
 
         openWeatherMap.getTemp(city).then(callSuccessHandler, callFailureHandler);
+    },
+    componentDidMount: function() {
+        "use strict";
+        let city = this.props.location.query.city;
+        if (city && city.length > 0) {
+            this.handleSearch(city);
+            window.location = '#/';
+        }
+    },
+    componentWillReceiveProps: function(propState) {
+        "use strict";
+        let city = propState.props.location.query.city;
+        if (city && city.length > 0) {
+            this.handleSearch(city);
+            window.location = '#/';
+        }
     },
     render: function() {
         /*let city = this.state.city,
