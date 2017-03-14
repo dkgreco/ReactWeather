@@ -1,4 +1,6 @@
-const React = require('react');
+const React = require('react'),
+    ReactDOM = require('react-dom'),
+    ReactDOMServer = require('react-dom/server');
 
 let ErrorModal;
 ErrorModal = React.createClass({
@@ -14,13 +16,8 @@ ErrorModal = React.createClass({
     },
     componentDidMount: function() {
         "use strict";
-        let modal = new Foundation.Reveal($('#error-modal'));
-        modal.open();
-    },
-    render: function() {
-        "use strict";
         let {title, message} = this.props;
-        return (
+        let modalMarkup = (
             <div id="error-modal" className="reveal tiny text-center" data-reveal="">
                 <h4>
                     {title}
@@ -33,6 +30,19 @@ ErrorModal = React.createClass({
                         Okay
                     </button>
                 </p>
+            </div>
+        );
+
+        let $modal = $(ReactDOMServer.renderToString(modalMarkup));
+        $(ReactDOM.findDOMNode(this)).html($modal);
+
+        let modal = new Foundation.Reveal($('#error-modal'));
+        modal.open();
+    },
+    render: function() {
+        "use strict";
+        return (
+            <div>
             </div>
         )
     }
