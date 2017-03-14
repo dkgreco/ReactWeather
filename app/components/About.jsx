@@ -1,5 +1,4 @@
 const React = require('react');
-let {Link} = require('react-router');
 
 let About;
 About = () => {
