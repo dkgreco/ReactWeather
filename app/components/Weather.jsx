@@ -50,7 +50,7 @@ Weather = React.createClass({
     },
     componentWillReceiveProps: function(propState) {
         "use strict";
-        let city = propState.props.location.query.city;
+        let city = propState.location.query.city;
         if (city && city.length > 0) {
             this.handleSearch(city);
             window.location = '#/';
